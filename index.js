@@ -21,6 +21,10 @@ app.get("/Web/Session", (req, res) => {
   res.status(503);
   res.send(json3);
 });
+
+app.get("/users", (req, res) => {
+  res.send(users);
+});
 //comment
 
 var json = {
@@ -211,3 +215,24 @@ var json3 = {
   sessionKey: "1234123154353213pl",
   code: 123,
 };
+
+var users = [
+  {
+    name: "Peanut",
+    address: "Peanut street",
+    phone: 123,
+    id: 0,
+  },
+  {
+    name: "Caramel",
+    address: "Caramel street",
+    phone: 124,
+    id: 1,
+  },
+  {
+    name: "Ice",
+    address: "Ice ice baby",
+    phone: 665,
+    id: 2,
+  },
+];
